@@ -64,12 +64,25 @@ WinTabMenu := false
 !#`::WinTabSend('{Enter}', true)
 #HotIf
 
+; taskbar quick launch apps scroll
+TaskBarQuickLaunch := false
+~XButton2 & WheelDown::{
+	Send("#t")	
+	global TaskBarQuickLaunch := true
+}
+#HotIf TaskBarQuickLaunch
+*WheelUp::WinTabSend('{Left}')
+*WheelDown::WinTabSend('{Right}')
+~XButton2 Up::WinTabSend('{Enter}', true)
+#HotIf
+
 
 WinTabSend(key, stop:=false) {
     Send(key)
     if stop = true {
         global WinTabMenu := false
 		global AltTabMenu := false
+		global TaskBarQuickLaunch := false
     }
 }
 
@@ -89,14 +102,27 @@ WinTabSend(key, stop:=false) {
 #HotIf
 
 
-; ; VS
-; ; ------------------
+; VS
+; ------------------
 
 #HotIf WinActive("ahk_exe devenv.exe")
 !#LButton::Send("^{F12}") ; go to Implementation
 !#MButton::Send("{F12}") ; go to definition
 !#RButton::{
-	KeyWait 'RButton' ; disable context menu
+	; KeyWait 'RButton' ; disable context menu
+	Send("+{F12}") ; view references popup
+}
+#HotIf					
+
+
+; VSCode
+; ------------------
+
+#HotIf WinActive("ahk_exe Code.exe")
+!#LButton::Send("^{F12}") ; go to Implementation
+!#MButton::Send("{F12}") ; go to definition
+!#RButton::{
+	; KeyWait 'RButton' ; disable context menu
 	Send("+{F12}") ; view references popup
 }
 #HotIf					
