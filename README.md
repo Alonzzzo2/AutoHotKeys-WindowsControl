@@ -1,4 +1,8 @@
 # AutoHotKeysScripts
 AutoHotKeysScripts
 
-###Welcome###
+### Welcome ###
+
+## This is the Windows Control AutoHotKeys script" ##
+
+# Instructions #
