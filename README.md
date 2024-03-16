@@ -33,7 +33,7 @@ So what I did is:
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
 
 #### Thumb button
-* - Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
+* \- Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
 * Wheel - Prev/Next tab (Chrome and many more apps)
 
 ##### Specific app - Chrome
