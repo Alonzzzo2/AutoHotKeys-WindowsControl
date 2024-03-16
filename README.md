@@ -1,4 +1,4 @@
-# AutoHotKeysScripts
+# AutoHotKeys-WindowsControl
 This repo is for my AutoHotKeys scripts, though currently I only see a need for the WindowsControl script.
 
 ## Windows Control script
