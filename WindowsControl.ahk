@@ -91,16 +91,23 @@ WinTabSend(key, stop:=false) {
 ; CHROME						
 
 ; ------------------
-
+IgnoreRightClick := false
 #HotIf WinActive("ahk_exe chrome.exe")
 !#RButton::{	
-	KeyWait 'RButton' ; disable context menu
+	global IgnoreRightClick := true
 	Send("^w") ; close tab
 }
 !#LButton::Send("^+t") ; reopen closed tab
 !#MButton::Send("^{F5}") ; refresh
 #HotIf
 
+#HotIf IgnoreRightClick
+*RButton Up::IgnoreRightClickFunc
+#HotIf 
+
+IgnoreRightClickFunc() {
+	global IgnoreRightClick := false
+}
 
 ; VS
 ; ------------------
@@ -109,7 +116,7 @@ WinTabSend(key, stop:=false) {
 !#LButton::Send("^{F12}") ; go to Implementation
 !#MButton::Send("{F12}") ; go to definition
 !#RButton::{
-	; KeyWait 'RButton' ; disable context menu
+	global IgnoreRightClick := true
 	Send("+{F12}") ; view references popup
 }
 #HotIf					
@@ -119,10 +126,10 @@ WinTabSend(key, stop:=false) {
 ; ------------------
 
 #HotIf WinActive("ahk_exe Code.exe")
-!#LButton::Send("^{F12}") ; go to Implementation
-!#MButton::Send("{F12}") ; go to definition
+!#MButton::Send("^{F12}") ; go to Implementation
+!#LButton::Send("{F12}") ; go to definition
 !#RButton::{
-	; KeyWait 'RButton' ; disable context menu
+	global IgnoreRightClick := true
 	Send("+{F12}") ; view references popup
 }
 #HotIf					
