@@ -21,6 +21,19 @@ RButton & XButton2::Media_Next
 ;RButton & WheelRight::#^Right
 ;RButton & WheelLeft::#^Left
 
+
+; RIGHT CLICK FIX
+; ------------------
+IgnoreRightClick := false
+#HotIf IgnoreRightClick
+*RButton Up::IgnoreRightClickFunc
+#HotIf 
+
+IgnoreRightClickFunc() {
+	global IgnoreRightClick := false
+}
+
+
 ; tab scroll
 !#WheelUp::Send("^+{Tab}")
 !#WheelDown::Send("^{Tab}")
@@ -37,11 +50,6 @@ AltTabMenu := false
 	Send("{Tab}")
 	global AltTabMenu := true
 }
-#HotIf AltTabMenu
-*WheelUp::WinTabSend('+{Tab}')
-*WheelDown::WinTabSend('{Tab}')
-~MButton Up::WinTabSend('{Alt up}', true)
-#HotIf
 
 ; menu tab and scroll through windows
 WinTabMenu := false
@@ -56,13 +64,6 @@ WinTabMenu := false
 	Send("#{Tab}")
 	global WinTabMenu := true
 }
-#HotIf WinTabMenu
-*WheelUp::WinTabSend('{Left}')
-*WheelDown::WinTabSend('{Right}')
-*RButton::WinTabSend('{Enter}', true)	
-*LButton::WinTabSend('{LButton}', true) ; maintain original functionality - select by left mouse button
-!#`::WinTabSend('{Enter}', true)
-#HotIf
 
 ; taskbar quick launch apps scroll
 TaskBarQuickLaunch := false
@@ -70,12 +71,28 @@ TaskBarQuickLaunch := false
 	Send("#t")	
 	global TaskBarQuickLaunch := true
 }
-#HotIf TaskBarQuickLaunch
+
+#HotIf AltTabMenu OR WinTabMenu OR TaskBarQuickLaunch
 *WheelUp::WinTabSend('{Left}')
 *WheelDown::WinTabSend('{Right}')
-~XButton2 Up::WinTabSend('{Enter}', true)
 #HotIf
 
+#HotIf AltTabMenu	
+*RButton::{
+	global IgnoreRightClick := true
+	Send("{Del}")
+}
+~MButton Up::WinTabSend('{Alt up}', true)
+#HotIf
+
+#HotIf WinTabMenu
+!#`::WinTabSend('{Enter}', true)
+;!+`::WinTabSend('{Enter}', true)
+#HotIf
+
+#HotIf TaskBarQuickLaunch
+~XButton2 Up::WinTabSend('{Enter}', true)
+#HotIf
 
 WinTabSend(key, stop:=false) {
     Send(key)
@@ -86,12 +103,9 @@ WinTabSend(key, stop:=false) {
     }
 }
 
-
-
-; CHROME						
-
+; CHROME
 ; ------------------
-IgnoreRightClick := false
+
 #HotIf WinActive("ahk_exe chrome.exe")
 !#RButton::{	
 	global IgnoreRightClick := true
@@ -101,13 +115,6 @@ IgnoreRightClick := false
 !#MButton::Send("^{F5}") ; refresh
 #HotIf
 
-#HotIf IgnoreRightClick
-*RButton Up::IgnoreRightClickFunc
-#HotIf 
-
-IgnoreRightClickFunc() {
-	global IgnoreRightClick := false
-}
 
 ; VS
 ; ------------------
