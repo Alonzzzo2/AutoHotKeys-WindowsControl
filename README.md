@@ -30,6 +30,7 @@ So what I did is:
 ### Alt tab
 #### Modifier - Middle button
 * Wheel Down - Open Alt-Tab menu, then, control selection via Wheel, select active window by releasing the Middle button
+* Right click - Exit selected app
 
 ### Taskbar apps
 #### Modifier - Next button
