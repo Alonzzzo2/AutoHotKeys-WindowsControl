@@ -23,15 +23,19 @@ So what I did is:
 * Back/Forward - Previous/Next track
 * Middle button - Play/Pause
 
+### Windows management
 #### Modifier - Back button
 * Wheel - WinKey + right/left  =  Snap window to regions (works best after configuring custom zones using PowerToys's FancyZones)
 
+### Alt tab
 #### Modifier - Middle button
 * Wheel Down - Open Alt-Tab menu, then, control selection via Wheel, select active window by releasing the Middle button
 
+### Taskbar apps
 #### Modifier - Next button
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
 
+### Win tab
 #### Thumb button
 * \- Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
 * Wheel - Prev/Next tab (Chrome and many more apps)
@@ -55,4 +59,4 @@ So what I did is:
 * Chrome - Can't close another tab without releasing the thumb button and re-clicking it
 * Visual Studio - Context menu still appears when 'go to usages'
 * VSCode - Context menu still appears when 'go to usages'
-
+* In Win tab usage (via the thumb button), need to exit the win tab view via the thumb button, otherwise left/right click act up. Can fix that by clicking the thumb button one more time
