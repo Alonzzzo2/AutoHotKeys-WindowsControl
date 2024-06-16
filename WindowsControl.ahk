@@ -13,15 +13,6 @@ RButton & XButton1::Media_Prev
 RButton & XButton2::Media_Next
 
 
-
-; GLOBAL
-; ------------------
-
-; workspace scroll
-;RButton & WheelRight::#^Right
-;RButton & WheelLeft::#^Left
-
-
 ; RIGHT CLICK FIX
 ; ------------------
 IgnoreRightClick := false
@@ -33,6 +24,19 @@ IgnoreRightClickFunc() {
 	global IgnoreRightClick := false
 }
 
+
+; GLOBAL
+; ------------------
+
+; workspace scroll
+RButton & WheelRight::{
+	global IgnoreRightClick := true
+	Send ("#^{Left}")
+}
+RButton & WheelLeft::{
+	global IgnoreRightClick := true
+	Send ("#^{Right}")
+}
 
 ; tab scroll
 !#WheelUp::Send("^+{Tab}")
