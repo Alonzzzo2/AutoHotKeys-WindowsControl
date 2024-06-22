@@ -131,8 +131,8 @@ WinTabSend(key, stop:=false) {
 ; ------------------
 
 #HotIf WinActive("ahk_exe devenv.exe")
-!#LButton::Send("^{F12}") ; go to Implementation
-!#MButton::Send("{F12}") ; go to definition
+!#MButton::Send("^{F12}") ; go to Implementation
+!#LButton::Send("{F12}") ; go to definition
 !#RButton::{
 	global IgnoreRightClick := true
 	Send("+{F12}") ; view references popup
