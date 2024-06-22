@@ -46,6 +46,13 @@ RButton & WheelLeft::{
 XButton1::XButton1
 XButton1 & WheelDown::Send("#{Right}")
 XButton1 & WheelUp::Send("#{Left}")
+XButton1 & MButton::Send("#{Down}")
+XButton1 & LButton::Send("!{Tab}")
+XButton1 & RButton::
+{
+	global IgnoreRightClick := true
+	Send("!{F4}")
+}
 
 ; alt tab scroll
 AltTabMenu := false
