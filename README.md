@@ -50,13 +50,13 @@ So what I did is:
 * Middle button - Force refresh (Control + F5)
 
 ##### Specific app - Visual Studio
-* Left button - Go to implementation
-* Middle button - Go to definition
+* Left button - Go to definition
+* Middle button - Go to implementation
 * Right button - Go to usages
 
 ##### Specific app - VSCode
-* Left button - Go to implementation
-* Middle button - Go to definition
+* Left button - Go to definition
+* Middle button - Go to implementation
 * Right button - Go to usages
 
 ### Known issues
