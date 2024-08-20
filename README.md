@@ -18,32 +18,43 @@ So what I did is:
 
 ## Usage - Configured mouse keys combos and their actions
 ### Media
-#### Modifier - Right click
+##### Modifier - Right click
 * Wheel - Volume
 * Back/Forward - Previous/Next track
 * Middle button - Play/Pause
 
+
 ### Windows management
-#### Modifier - Back button
+##### Modifier - Back button
 * Wheel - WinKey + right/left  =  Snap window to regions (works best after configuring custom zones using PowerToys's FancyZones)
 * Right click - close window (Alt + F4)
 * Middle click - Minimize window
 * Left click - Resotre window (does Alt+Tab which bring back the restored window, as an undo operation, but also useful to switch between 2 apps quickly)
 
+
 ### Alt tab
-#### Modifier - Middle button
+##### Modifier - Middle button
 * Wheel Down - Open Alt-Tab menu, then, control selection via Wheel, select active window by releasing the Middle button
 * Right click - Exit selected app
 
+
 ### Taskbar apps
-#### Modifier - Next button
+##### Modifier - Next button
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
 
+
 ### Win tab
-#### Thumb button
+##### Thumb button
 * \- Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
 * Wheel - Prev/Next tab (Chrome and many more apps)
 
+
+### Zoom mode
+##### Modifier - Middle button
+* Wheel Up/Down = Zoom (Ctrl + '+' / '-')
+
+
+### Specific Apps
 ##### Specific app - Chrome
 * Right button - Close tab
 * Left button - Undo close tab / recover last closed tab
