@@ -71,7 +71,4 @@ So what I did is:
 * Right button - Go to usages
 
 ### Known issues
-* Chrome - Can't close another tab without releasing the thumb button and re-clicking it
-* Visual Studio - Context menu still appears when 'go to usages'
-* VSCode - Context menu still appears when 'go to usages'
 * In Win tab usage (via the thumb button), need to exit the win tab view via the thumb button, otherwise left/right click act up. Can fix that by clicking the thumb button one more time
