@@ -28,6 +28,30 @@ IgnoreRightClickFunc() {
 ; GLOBAL
 ; ------------------
 
+; ctrl + wheel ~ zoom
+ScrollMode := false
+MButton & WheelUp::
+{
+	if (AltTabMenu) {
+		WinTabSend('{Left}') ; very ugly, code duplication, need to fix this
+		return
+	}
+    global ScrollMode := true
+	KeyWait "MButton"
+    ScrollMode := false
+}
+#HotIf ScrollMode
+MButton & WheelUp::
+{
+	Send "^{WheelUp}"
+}
+MButton & WheelDown::
+{
+	Send "^{WheelDown}"
+}
+#HotIf
+
+
 ; workspace scroll
 RButton & WheelRight::{
 	global IgnoreRightClick := true
@@ -84,11 +108,11 @@ TaskBarQuickLaunch := false
 }
 
 #HotIf AltTabMenu OR WinTabMenu OR TaskBarQuickLaunch
-*WheelUp::WinTabSend('{Left}')
-*WheelDown::WinTabSend('{Right}')
+	*WheelUp::WinTabSend('{Left}')
+	*WheelDown::WinTabSend('{Right}')
 #HotIf
 
-#HotIf AltTabMenu	
+#HotIf AltTabMenu
 *RButton::{
 	global IgnoreRightClick := true
 	Send("{Del}")
