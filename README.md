@@ -73,3 +73,4 @@ So what I did is:
 ### Known issues
 * Sometimes the mouse buttons will not respond as they should, especially after using the thumb button - click it again, it usually fixes the issue
 * In Win tab usage (via the thumb button), need to exit the win tab view via the thumb button, otherwise left/right click act up. Can fix that by clicking the thumb button one more time
+* Sometimes, switchinbg workspace (Right click + horizontal scroll) works only when the mouse pointer is on the taskbar
