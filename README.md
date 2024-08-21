@@ -27,9 +27,9 @@ So what I did is:
 ### Windows management
 ##### Modifier - Back button
 * Wheel - WinKey + right/left  =  Snap window to regions (works best after configuring custom zones using PowerToys' FancyZones)
-* Right click - close window (Alt + F4)
-* Middle click - Minimize window
-* Left click - Resotre window (does Alt+Tab which bring back the restored window, as an undo operation, but also useful to switch between 2 apps quickly)
+* Right click - Close active window (Alt + F4)
+* Middle click - Minimize active window
+* Left click - Restore window (does Alt+Tab which bring back the restored window, as an undo operation, but also useful to switch between 2 apps quickly)
 
 
 ### Alt tab
