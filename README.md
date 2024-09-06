@@ -16,12 +16,19 @@ So what I did is:
 4. If you plan on using this script on Admin-running apps also, make sure you're also running this script as Admin
 5. If you plan on editing this script, I used Notepad++ and set the language to AutoIt (there's no Notepad++ language definition for AHK files)
 
-## Usage - Configured mouse keys combos and their actions
+## Usage - Configured mouse button combos and their actions
 ### Media
 ##### Modifier - Right click
 * Wheel - Volume
 * Back/Forward - Previous/Next track
 * Middle button - Play/Pause
+
+
+### Clipboard
+#### Modifier - Next button
+* Left click - Copy
+* Middle click - Cut
+* Right click - Paste
 
 
 ### Windows management
@@ -32,21 +39,26 @@ So what I did is:
 * Left click - Restore window (does Alt+Tab which bring back the restored window, as an undo operation, but also useful to switch between 2 apps quickly)
 
 
-### Alt tab
+### Alt-tab
 ##### Modifier - Middle button
 * Wheel Down - Open Alt-Tab menu, then, control selection via Wheel, select active window by releasing the Middle button
 * Right click - Exit selected app
 
 
+### Win-tab
+##### Thumb button
+* Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
+* Wheel - Prev/Next tab (Chrome and many more apps)
+
+
+### Tab swithcing (Chrome etc.)
+##### Thumb button
+* Wheel - Prev/Next tab (Chrome and many more apps)
+
+
 ### Taskbar apps
 ##### Modifier - Next button
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
-
-
-### Win tab
-##### Thumb button
-* \- Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
-* Wheel - Prev/Next tab (Chrome and many more apps)
 
 
 ### Zoom mode
