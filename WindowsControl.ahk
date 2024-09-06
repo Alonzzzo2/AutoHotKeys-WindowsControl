@@ -13,20 +13,55 @@ RButton & XButton1::Media_Prev
 RButton & XButton2::Media_Next
 
 
-; RIGHT CLICK FIX
+; RIGHT CLICK FIX WHEN USED AS A MODIFIER
 ; ------------------
 IgnoreRightClick := false
 #HotIf IgnoreRightClick
-*RButton Up::IgnoreRightClickFunc
-#HotIf 
-
-IgnoreRightClickFunc() {
+*RButton Up::{
 	global IgnoreRightClick := false
 }
+#HotIf 
 
+
+; XButton1 FIX WHEN USED AS A MODIFIER
+; ------------------
+IgnoreXButton1Click := false
+#HotIf IgnoreXButton1Click
+*XButton1 Up::{
+	global IgnoreXButton1Click := false
+}
+#HotIf
+
+
+; XButton2 FIX WHEN USED AS A MODIFIER
+; ------------------
+IgnoreXButton2Click := true
+#HotIf IgnoreXButton2Click
+XButton2::{
+	global IgnoreXButton2Click := false
+}
+#HotIf
 
 ; GLOBAL
 ; ------------------
+
+
+; copy and paste
+XButton2 & LButton:: {
+	global IgnoreXButton2Click := true
+	Send("^c")
+}
+XButton2 & MButton:: {
+	global IgnoreXButton2Click := true
+	Send("^x")
+}
+XButton2 & RButton:: {
+	global IgnoreXButton2Click := true
+	global IgnoreRightClick := true
+	Send("^v")
+}
+
+
 
 ; ctrl + wheel ~ zoom
 ScrollMode := false

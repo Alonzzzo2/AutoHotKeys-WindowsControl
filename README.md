@@ -19,12 +19,20 @@ So what I did is:
 ## Development instructions
 In order to use Notepad++ with AHK syntax highlighting and auto complete, follow this guide: https://www.autohotkey.com/boards/viewtopic.php?t=50
 
-## Usage - Configured mouse keys combos and their actions
+## Usage - Configured mouse button combos and their actions
+
 ### Media
 ##### Modifier - Right click
 * Wheel - Volume
 * Back/Forward - Previous/Next track
 * Middle button - Play/Pause
+
+
+### Clipboard
+#### Modifier - Next button
+* Left click - Copy
+* Middle click - Cut
+* Right click - Paste
 
 
 ### Windows management
@@ -35,21 +43,26 @@ In order to use Notepad++ with AHK syntax highlighting and auto complete, follow
 * Left click - Restore window (does Alt+Tab which bring back the restored window, as an undo operation, but also useful to switch between 2 apps quickly)
 
 
-### Alt tab
+### Alt-tab
 ##### Modifier - Middle button
 * Wheel Down - Open Alt-Tab menu, then, control selection via Wheel, select active window by releasing the Middle button
 * Right click - Exit selected app
 
 
+### Win-tab
+##### Thumb button
+* Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
+* Wheel - Prev/Next tab (Chrome and many more apps)
+
+
+### Tab swithcing (Chrome etc.)
+##### Thumb button
+* Wheel - Prev/Next tab (Chrome and many more apps)
+
+
 ### Taskbar apps
 ##### Modifier - Forward button
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
-
-
-### Win tab
-##### Thumb button
-* \- Clicking it will open the Win-Tab menu, like its original behavior, only now you can control selection via wheel, select app by click Left/Right/Thumb buttons
-* Wheel - Prev/Next tab (Chrome and many more apps)
 
 
 ### Zoom mode
