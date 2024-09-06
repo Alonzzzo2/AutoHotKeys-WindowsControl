@@ -42,7 +42,7 @@ In order to use Notepad++ with AHK syntax highlighting and auto complete, follow
 
 
 ### Taskbar apps
-##### Modifier - Next button
+##### Modifier - Forward button
 * Wheen Down - Execute an app from the taskbar - control selection via Wheel, select app to execute by releasing the Next button
 
 
