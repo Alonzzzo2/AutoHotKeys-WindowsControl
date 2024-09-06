@@ -16,6 +16,9 @@ So what I did is:
 4. If you plan on using this script on Admin-running apps also, make sure you're also running this script as Admin
 5. If you plan on editing this script, I used Notepad++ and set the language to AutoIt (there's no Notepad++ language definition for AHK files)
 
+## Development instructions
+In order to use Notepad++ with AHK syntax highlighting and auto complete, follow this guide: https://www.autohotkey.com/boards/viewtopic.php?t=50
+
 ## Usage - Configured mouse keys combos and their actions
 ### Media
 ##### Modifier - Right click
