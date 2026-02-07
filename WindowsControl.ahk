@@ -211,3 +211,12 @@ WinTabSend(key, stop:=false) {
 }
 #HotIf					
 					
+; SCROLL FAILSAFE (The Fix)
+; ------------------
+; Because WheelUp/Down are used as suffixes in combos (RButton & WheelUp) AND 
+; as conditional hotkeys (*WheelUp), their native function is often lost.
+; We explicitly restore them here at the global level.
+
+#HotIf ; Reset to global context
+WheelUp::Click "WheelUp"
+WheelDown::Click "WheelDown"
